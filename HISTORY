@@ -67,3 +67,7 @@ events showing in the EPG when times are changed for programmes
 - Added option to specify ratings.conf and genres.conf
 - Changed the reading of the genre/ratings conf files. Now it realy strips out comment and empty lines :) 
 
+2018-04-10
+
+- Updated script from pastebin
+- Updated genres.conf for proper description parsing per vdr
