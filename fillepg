@@ -1,0 +1,1 @@
+sudo ./xmltv2vdr.pl -l 2 -c channels.conf -g genre.conf -x xmltv_default.xml

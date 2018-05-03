@@ -1,0 +1,73 @@
+xmltv2vdr Revision History
+--------------------------
+
+2003-04-04: Version 1.0
+
+- Initial revision.
+
+2003-04-05: Version 1.0.1
+
+- Clear EPG information before putting in the new info. This stops duplicate
+events showing in the EPG when times are changed for programmes
+
+2003-04-07: Version 1.0.2
+
+- Problem with ending an event when "no info available" is now fixed
+- Problem with 2 "e" event end codes at end of EPG crashing VDR is now fixed
+
+2003-05-01: Version 1.0.3
+
+- Problem with not reading final data and closing the SOCK sometimes crashes
+  VDR - now fixed.
+- Problem with inserting channel information when the NID > 0 is now fixed,
+  thanks to Gerhard Steiner.
+
+2003-05-18: Version 1.0.4
+
+- Problem with options fixed
+- Changes incorporated from Erik Günther ("I did find out that VDR ignores extra  information on a line so adding xmltv-info at the end of the line works fine.   The problem was that xmltv2vdr.pl expected that all lines in input ether 
+  to have a xmltv extention or was not an header line.  I also added an new 
+  option -t for changing the timeout. This was for my machine a P3 600 
+  was to slow and wasn't done in time. So now I can specify -t 600 for 600s)
+- Fixed problems with the "expected SVDRP code 250, but received 451 at 
+  ./xmltv2vdr.pl line 56" error.
+- Added extra flag, -v to show warning/debug messages
+
+2003-05-19: Version 1.0.5
+
+- Added simulation mode option (-s) for debugging. This does not send info
+  to SVDRP, but prints all commands it would sent to stdout.
+- Fixed problem for satellite users not getting information into VDR. Problem
+  was that the frequency is not chopped to three digits like terrestrial.
+
+2004-04-19: Version 1.0.6
+
+- Added fixes for German and English HTML translations (&amp etc)
+- Some people report having time problems, I suspect this is due to incorrect
+  time zone settings or problems with xmltv listings, but I have added
+  a skew setting to xmltv2vdr (e.g. -a -60 to set the listings data back one 
+  hour).
+- Tidied up the usage information
+- Fixed SVDRReceive which caused broken pipe errors, and ignoring last channel
+  in the config file
+- Fixed small problem with pattern matching code (thanks to Dominic Morris 
+  and Tony Leino)
+
+2007-04-13: Version 1.0.7
+
+- Code updates and speed improvements, with thanks to Sebastien Lucas
+
+2010-03-07: Version 1.0.8
+
+- Added genre information
+
+2010-03-09: Version 1.0.9
+
+- Added Ratings, tidied Genre for NA..  Added ratings, Genre and Credits into description.
+- Added option to specify ratings.conf and genres.conf
+- Changed the reading of the genre/ratings conf files. Now it realy strips out comment and empty lines :) 
+
+2018-04-10
+
+- Updated script from pastebin
+- Updated genres.conf for proper description parsing per vdr
